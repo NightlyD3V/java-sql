@@ -57,6 +57,10 @@ WHERE CustomerName = 'The Shire'
 
 ### list orders grouped by customer showing the number of orders per customer. _Rattlesnake Canyon Grocery_ should have 7 orders.
 > This can be done with SELECT, COUNT, JOIN and GROUP BY clauses. Your count should focus on a field in the Orders table, not the Customer table
+SELECT Orders.OrderID, Customers.CustomerID, Customers.CustomerName
+FROM Orders
+JOIN Customers ON Orders.CustomerID=Customers.CustomerID
+WHERE CustomerName = 'Rattlesnake Canyon Grocery'
 
 > There is more information about the COUNT clause on [W3 Schools](https://www.w3schools.com/sql/sql_count_avg_sum.asp)
 
